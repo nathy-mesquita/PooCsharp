@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteBank</name>
+    </assembly>
+    <members>
+        <member name="T:ByteBank.Funcionarios.Auxiliar">
+            <summary>
+            Auxiliar derivado de Funcionário 
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Auxiliar.#ctor(System.String)">
+            <summary>
+            Intância da classe 
+            </summary>
+            <param name="cpf">Cpf do auxiliar</param>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Auxiliar.AumentarSalario">
+            <summary>
+            Método aumentar salário
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Auxiliar.GetBonificacao">
+            <summary>
+            Médoto de bonificação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ByteBank.Funcionarios.Designer">
+            <summary>
+            Designer derivado de Funcionário
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Designer.#ctor(System.String)">
+            <summary>
+            Intância da classe 
+            </summary>
+            <param name="cpf">Cpf do designer</param>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Designer.AumentarSalario">
+            <summary>
+            Método aumentar salário
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Designer.GetBonificacao">
+            <summary>
+            Médoto de bonificação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ByteBank.Funcionarios.Diretor">
+            <summary>
+            Diretor derivado de FuncionárioAutenticavel
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Diretor.#ctor(System.String)">
+            <summary>
+            Intância da classe 
+            </summary>
+            <param name="cpf">Cpf do Diretor</param>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Diretor.GetBonificacao">
+            <summary>
+            Médoto de bonificação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Diretor.AumentarSalario">
+            <summary>
+            Método aumentar salário
+            </summary>
+        </member>
+        <member name="T:ByteBank.Funcionarios.Funcionario">
+            <summary>
+            Classe abstrata de Funcionário
+            </summary>
+        </member>
+        <member name="P:ByteBank.Funcionarios.Funcionario.TotalDeFuncionarios">
+            <summary>
+            Propriedade que contabiliza a quantidade total de funcionários
+            </summary>
+        </member>
+        <member name="P:ByteBank.Funcionarios.Funcionario.Nome">
+            <summary>
+            Propriedade Nome
+            </summary>
+        </member>
+        <member name="P:ByteBank.Funcionarios.Funcionario.CPF">
+            <summary>
+            Propriedade CPF
+            </summary>
+        </member>
+        <member name="P:ByteBank.Funcionarios.Funcionario.Salario">
+            <summary>
+            Propriedade Salario
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Funcionario.#ctor(System.Double,System.String)">
+            <summary>
+            Construtor da classe Base Funcionario
+            </summary>
+            <param name="salario">Salário do Funcionário</param>
+            <param name="cpf">CPF do Funcionário</param>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Funcionario.AumentarSalario">
+            <summary>
+            Método abstrato de Aumentar o Salário do Funcionário
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.Funcionario.GetBonificacao">
+            <summary>
+            Método abstrato que obtêm a bonificação do Funcionário
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ByteBank.Funcionarios.FuncionarioAutenticavel">
+            <summary>
+            Classe abstrata (pois não implementa os métodos da classe base Funcionário) e obtêm a onterface Autenticavel
+            </summary>
+        </member>
+        <member name="P:ByteBank.Funcionarios.FuncionarioAutenticavel.Senha">
+            <summary>
+            Propriedade do método Autenticar
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.FuncionarioAutenticavel.#ctor(System.Double,System.String)">
+            <summary>
+            Construtor da classe, que passa os parâmetros para a classe base Funcionario
+            </summary>
+            <param name="salario">Salário do Funcioário</param>
+            <param name="cpf">CPF do Funcioário</param>
+        </member>
+        <member name="M:ByteBank.Funcionarios.FuncionarioAutenticavel.Autenticar(System.String)">
+            <summary>
+            Implementação do método Autenticar
+            </summary>
+            <param name="senha">Senha do Funcionário</param>
+            <returns></returns>
+        </member>
+        <member name="T:ByteBank.Funcionarios.GerenteDeConta">
+            <summary>
+            Gerente de conta derivado de FuncionárioAutenticavel
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.GerenteDeConta.#ctor(System.String)">
+            <summary>
+            Intância da classe 
+            </summary>
+            <param name="cpf">Cpf do Gerente de Conta</param>
+        </member>
+        <member name="M:ByteBank.Funcionarios.GerenteDeConta.AumentarSalario">
+            <summary>
+            Método aumentar salário
+            </summary>
+        </member>
+        <member name="M:ByteBank.Funcionarios.GerenteDeConta.GetBonificacao">
+            <summary>
+            Médoto de bonificação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ByteBank.Parceiros.ParceiroComercial">
+            <summary>
+            Parceiro comercial que assina o contrato de autenticar
+            </summary>
+        </member>
+        <member name="P:ByteBank.Parceiros.ParceiroComercial.Senha">
+            <summary>
+            Propiedade da senha
+            </summary>
+        </member>
+        <member name="M:ByteBank.Parceiros.ParceiroComercial.Autenticar(System.String)">
+            <summary>
+            Método de autenticação
+            </summary>
+            <param name="senha">Senha do parceiro comercial</param>
+            <returns></returns>
+        </member>
+        <member name="T:ByteBank.Sistemas.IAutenticavel">
+            <summary>
+            Interface (contrato) para autenticação de usuário
+            </summary>
+        </member>
+        <member name="M:ByteBank.Sistemas.IAutenticavel.Autenticar(System.String)">
+            <summary>
+            Assinatura do método autenticável
+            </summary>
+            <param name="senha"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ByteBank.Sistemas.SistemaInterno">
+            <summary>
+            Sistema interno que verifica a autenticidade dos usuários
+            </summary>
+        </member>
+        <member name="M:ByteBank.Sistemas.SistemaInterno.Logar(ByteBank.Sistemas.IAutenticavel,System.String)">
+            <summary>
+            Método de fazer login 
+            </summary>
+            <param name="funcionario"></param>
+            <param name="senha"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
