@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ByteBank.Funcionarios
 {
     /// <summary>
-    /// Classe abstrata (pois não implementa os métodos da classe base Funcionário) e obtêm a onterface Autenticavel
+    /// Classe abstrata (pois não implementa os métodos da classe base Funcionário) e obtêm a interface Autenticavel
     /// </summary>
     public abstract class FuncionarioAutenticavel : Funcionario, IAutenticavel
     {

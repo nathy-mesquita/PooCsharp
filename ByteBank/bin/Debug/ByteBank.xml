@@ -4,6 +4,71 @@
         <name>ByteBank</name>
     </assembly>
     <members>
+        <member name="P:ByteBank.Contas.ContaCorrente.Numero">
+            <summary>
+            Pripriedade apenas de Leitura "readonly", pois não tem o set. 
+            Poderá ser usado apenas no construtor.
+            </summary>
+        </member>
+        <member name="P:ByteBank.Contas.ContaCorrente.Agencia">
+            <summary>
+            Propriedade apenas de Leitura "readonly", pois não tem o set.
+            Poderá ser usada apenas no construtor.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Contas.ContaCorrente.#ctor(System.Int32,System.Int32)" -->
+        <member name="P:ByteBank.Contas.ContaCorrente.Saldo">
+            <summary>
+            Informa o saldo na conta do cliente
+            </summary>
+        </member>
+        <member name="M:ByteBank.Contas.ContaCorrente.Sacar(System.Double)">
+            <summary>
+            Saca o valor da connta do cliente
+            </summary>
+            <param name="valor">valor para saque</param>
+        </member>
+        <member name="M:ByteBank.Contas.ContaCorrente.Depositar(System.Double)">
+            <summary>
+            Deposita um valor na conta do cliente
+            </summary>
+            <param name="valor">valor para depósito</param>
+        </member>
+        <member name="M:ByteBank.Contas.ContaCorrente.Transferir(System.Double,ByteBank.Contas.ContaCorrente)">
+            <summary>
+            Transfere um valor entre contas
+            </summary>
+            <param name="valor">valor para transferência</param>
+            <param name="contaDestino">conta de destino para tranferência</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:ByteBank.Exceptions.OperaçãoFinanceiraException" -->
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Exceptions.OperaçãoFinanceiraException.#ctor" -->
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Exceptions.OperaçãoFinanceiraException.#ctor(System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Exceptions.OperaçãoFinanceiraException.#ctor(System.String,System.Exception)" -->
+        <member name="T:ByteBank.Exceptions.SaldoInsuficienteException">
+            <summary>
+            Criação de uma própria exceção do tipo SaldoInsuficienteException que deriva de Exception
+            </summary>
+        </member>
+        <member name="M:ByteBank.Exceptions.SaldoInsuficienteException.#ctor">
+            <summary>
+            Construtor sem parâmetros.
+            </summary>
+        </member>
+        <member name="M:ByteBank.Exceptions.SaldoInsuficienteException.#ctor(System.Double,System.Double)">
+            <summary>
+            Contrutor com verificação do saldo disponível e valor de saque
+            </summary>
+            <param name="saldo">Saldo disponível na conta</param>
+            <param name="valorSaque">Valor solicitado para saque</param>
+        </member>
+        <member name="M:ByteBank.Exceptions.SaldoInsuficienteException.#ctor(System.String)">
+            <summary>
+            Construtor com parâmetro de mensagem.
+            </summary>
+            <param name="mensagem">passa um informação personalizada da excação tratada</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Exceptions.SaldoInsuficienteException.#ctor(System.String,System.RankException)" -->
         <member name="T:ByteBank.Funcionarios.Auxiliar">
             <summary>
             Auxiliar derivado de Funcionário 
@@ -115,7 +180,7 @@
         </member>
         <member name="T:ByteBank.Funcionarios.FuncionarioAutenticavel">
             <summary>
-            Classe abstrata (pois não implementa os métodos da classe base Funcionário) e obtêm a onterface Autenticavel
+            Classe abstrata (pois não implementa os métodos da classe base Funcionário) e obtêm a interface Autenticavel
             </summary>
         </member>
         <member name="P:ByteBank.Funcionarios.FuncionarioAutenticavel.Senha">
@@ -158,6 +223,11 @@
             Médoto de bonificação
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:ByteBank.LeitorDeArquivo.Dispose">
+            <summary>
+            Método responsável por liberar os recursos
+            </summary>
         </member>
         <member name="T:ByteBank.Parceiros.ParceiroComercial">
             <summary>
