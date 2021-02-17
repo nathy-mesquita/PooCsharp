@@ -14,3 +14,7 @@ C:\projects\CshapAnd.Net\PooCsharp\ByteBank\obj\Debug\ByteBank.csprojAssemblyRef
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank\obj\Debug\ByteBank.csproj.CoreCompileInputs.cache
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank\obj\Debug\ByteBank.exe
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank\obj\Debug\ByteBank.pdb
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank\bin\Debug\ByteBank.models.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank\bin\Debug\ByteBank.models.pdb
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank\obj\Debug\ByteBank.csproj.CopyComplete
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank\bin\Debug\ByteBank.models.xml

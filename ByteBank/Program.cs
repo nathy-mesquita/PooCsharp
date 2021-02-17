@@ -1,8 +1,8 @@
-﻿using ByteBank.Contas;
-using ByteBank.Exceptions;
-using ByteBank.Funcionarios;
-using ByteBank.Parceiros;
-using ByteBank.Sistemas;
+﻿using ByteBank.Models.Contas;
+using ByteBank.Models.Exceptions;
+using ByteBank.Models.Funcionarios;
+using ByteBank.Models.Parceiros;
+using ByteBank.Models.Sistemas;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -177,8 +177,7 @@ namespace ByteBank
             gerenciadorDeBonificacao.Registrar(maria);
 
 
-            Console.WriteLine("Total de bonificação no mês R$" +
-                gerenciadorDeBonificacao.GetBonificacao());
+        
 
         }
     }

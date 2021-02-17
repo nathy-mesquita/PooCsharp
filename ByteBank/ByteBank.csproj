@@ -59,23 +59,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Contas\ContaCorrente.cs" />
-    <Compile Include="Exceptions\OperaçãoFinanceiraException.cs" />
-    <Compile Include="Funcionarios\Auxiliar.cs" />
-    <Compile Include="Funcionarios\Designer.cs" />
-    <Compile Include="Funcionarios\Diretor.cs" />
-    <Compile Include="Funcionarios\Funcionario.cs" />
-    <Compile Include="Funcionarios\FuncionarioAutenticavel.cs" />
-    <Compile Include="Funcionarios\GerenteDeConta.cs" />
-    <Compile Include="GerenciadorDeBonificacao.cs" />
     <Compile Include="LeitorDeArquivo.cs" />
-    <Compile Include="Parceiros\ParceiroComercial.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Exceptions\SaldoInsuficienteException.cs" />
-    <Compile Include="Sistemas\IAutenticavel.cs" />
-    <Compile Include="Sistemas\SistemaInterno.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -92,6 +78,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ByteBank.models\ByteBank.Models.csproj">
+      <Project>{36a123df-0f58-47bf-9bb9-89e02344d1e1}</Project>
+      <Name>ByteBank.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

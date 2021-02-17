@@ -1,0 +1,7 @@
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.models\bin\Debug\ByteBank.models.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.models\bin\Debug\ByteBank.models.pdb
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.models\obj\Debug\ByteBank.models.csprojAssemblyReference.cache
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.models\obj\Debug\ByteBank.models.csproj.CoreCompileInputs.cache
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.models\obj\Debug\ByteBank.models.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.models\obj\Debug\ByteBank.models.pdb
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.models\bin\Debug\ByteBank.models.xml
