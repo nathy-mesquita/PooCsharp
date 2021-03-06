@@ -6,17 +6,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank.SistemaAgencia
+namespace ByteBank.SistemaAgencia 
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DateCountdown();
 
+            string urlParametros = "https://www.bytebank.com.br/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
+
+            ExtractValueArgumentsURL extrator = new ExtractValueArgumentsURL(urlParametros);
+
+            string valor = extrator.GetValor("valor");
+            Console.WriteLine(valor);
             Console.ReadLine();
 
         }
+
+
 
         public static void DateCountdown()
         {
