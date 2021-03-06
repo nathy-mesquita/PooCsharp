@@ -17,7 +17,7 @@ namespace ByteBank.SistemaAgencia
 
             ExtractValueArgumentsURL extrator = new ExtractValueArgumentsURL(urlParametros);
 
-            string valor = extrator.GetValor("valor");
+            string valor = extrator.GetValor("MoeDaOriGem");
             Console.WriteLine(valor);
             Console.ReadLine();
 

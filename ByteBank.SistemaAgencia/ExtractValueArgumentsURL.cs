@@ -8,10 +8,8 @@ namespace ByteBank.SistemaAgencia
 {
     public class ExtractValueArgumentsURL
     {
-        private readonly string _argumentos; //privado, somente leitura
-        public string URL { get; }//Sem o set, somente leitura 
-        // Quando a propriedade é apenas leitura, conseguimos editar apenas em dois campos, no construtor e na propria declaração da propriedade. 
-    
+        private readonly string _argumentos;
+        public string URL { get; }
         
         public ExtractValueArgumentsURL(string url)
         {
@@ -26,13 +24,13 @@ namespace ByteBank.SistemaAgencia
             _argumentos = url.Substring(indiceInterrogacao + 1);
         }
 
-        //string url ="https://www.bytebank.com.br/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
-        //_argumento ="moedaOrigem=real&moedaDestino=dolar&valor=1500";
-
         public string GetValor(string nomeParametro)
         {
-            string termo = nomeParametro + "=";
-            int indiceTermo = _argumentos.IndexOf(termo);
+            string nomePametroNormalizado = nomeParametro.ToUpper();
+            string argumentoNormalizado = _argumentos.ToUpper();
+
+            string termo = nomePametroNormalizado + "=";
+            int indiceTermo = argumentoNormalizado.IndexOf(termo);
 
             string result = _argumentos.Substring(indiceTermo + termo.Length);
             int indiceEComercial = result.IndexOf('&');
