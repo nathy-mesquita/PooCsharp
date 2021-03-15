@@ -116,5 +116,12 @@ namespace ByteBank.Models.Contas
             }
             contaDestino.Depositar(valor);
         }
+
+        public override string ToString()
+        {
+            return $"Número:{Numero} Agência:{Agencia} Saldo: R${Saldo}";
+            //return "Número:" +  Numero + " Agência:" + Agencia + " Saldo: R$" + Saldo ;
+        }
+
     }
 }
