@@ -53,3 +53,4 @@ C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\vi\Humanize
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\zh-CN\Humanizer.resources.dll
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\zh-Hans\Humanizer.resources.dll
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\zh-Hant\Humanizer.resources.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\ByteBank.models.pdb

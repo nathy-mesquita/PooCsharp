@@ -44,13 +44,17 @@
             <param name="valor">valor para transferência</param>
             <param name="contaDestino">conta de destino para tranferência</param>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:ByteBank.Models.Exceptions.OperaçãoFinanceiraException" -->
+        <member name="T:ByteBank.Models.Exceptions.OperaçãoFinanceiraException">
+            <summary>
+            Define uma exceção OperacaoFinanceiraException 
+            </summary>
+        </member>
         <!-- Badly formed XML comment ignored for member "M:ByteBank.Models.Exceptions.OperaçãoFinanceiraException.#ctor" -->
         <!-- Badly formed XML comment ignored for member "M:ByteBank.Models.Exceptions.OperaçãoFinanceiraException.#ctor(System.String)" -->
         <!-- Badly formed XML comment ignored for member "M:ByteBank.Models.Exceptions.OperaçãoFinanceiraException.#ctor(System.String,System.Exception)" -->
         <member name="T:ByteBank.Models.Exceptions.SaldoInsuficienteException">
             <summary>
-            Criação de uma própria exceção do tipo SaldoInsuficienteException que deriva de Exception
+            Define uma exceção do tipo SaldoInsuficienteException
             </summary>
         </member>
         <member name="M:ByteBank.Models.Exceptions.SaldoInsuficienteException.#ctor">
@@ -244,6 +248,14 @@
             <param name="senha">Senha do parceiro comercial</param>
             <returns></returns>
         </member>
+        <!-- Badly formed XML comment ignored for member "T:ByteBank.Models.Sistemas.AutenticacaoHelper" -->
+        <member name="T:ByteBank.Models.Sistemas.GerenciadorDeBonificacao">
+            <summary>
+            Calcula a bonificação de acordo com cada funcionário
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Models.Sistemas.GerenciadorDeBonificacao.Registrar(ByteBank.Models.Funcionarios.Funcionario)" -->
+        <!-- Badly formed XML comment ignored for member "M:ByteBank.Models.Sistemas.GerenciadorDeBonificacao.GetBonificacao" -->
         <member name="T:ByteBank.Models.Sistemas.IAutenticavel">
             <summary>
             Interface (contrato) para autenticação de usuário
@@ -253,7 +265,7 @@
             <summary>
             Assinatura do método autenticável
             </summary>
-            <param name="senha"></param>
+            <param name="senha">Senha do usuário</param>
             <returns></returns>
         </member>
         <member name="T:ByteBank.Models.Sistemas.SistemaInterno">
@@ -268,6 +280,11 @@
             <param name="funcionario"></param>
             <param name="senha"></param>
             <returns></returns>
+        </member>
+        <member name="T:ByteBank.models.Sistemas.DateCountdown">
+            <summary>
+            Contagem regressiva de data
+            </summary>
         </member>
     </members>
 </doc>
