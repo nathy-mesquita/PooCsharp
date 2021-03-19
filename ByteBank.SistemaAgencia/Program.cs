@@ -14,8 +14,45 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            
 
+            ContaCorrente[] contas = new ContaCorrente[]
+            {
+                new ContaCorrente(0001, 1000),
+                new ContaCorrente(0001, 1001),
+                new ContaCorrente(0001, 1002)
+
+            };
+
+
+            for (int i= 0; i< contas.Length; i++)
+            {
+                Console.WriteLine($"Conta Corrente {i}: {contas[i].Numero}");
+            }
+
+            Console.ReadLine();
+        }
+
+        public static void MediaDeIdadesComArray()
+        {
+            /*-------ARRAY de Inteiros com 5 posições---------*/
+            //Criando um objeto de array
+            int[] idades = new int[5];
+            //Populando o Array
+            idades[0] = 14;
+            idades[1] = 45;
+            idades[2] = 16;
+            idades[3] = 22;
+            idades[4] = 28;
+
+            int somatorioIdades = 0;
+            for (int i = 0; i < idades.Length; i++)
+            {
+                int idade = idades[i];
+                Console.WriteLine($"Accessando o array idades no índice {i} = {idade}");
+                somatorioIdades += idade;
+            }
+            int media = somatorioIdades / idades.Length;
+            Console.WriteLine($"Média das idades: {media}");
 
         }
 
