@@ -1,9 +1,9 @@
-﻿using ByteBank.Models;
-using ByteBank.Models.Contas;
+﻿using System;
 using Humanizer;
-using System;
-using System.Linq;
 using System.Text;
+using System.Linq;
+using ByteBank.Models;
+using ByteBank.Models.Contas;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -16,6 +16,27 @@ namespace ByteBank.SistemaAgencia
         {
 
             Console.ReadLine();
+        }
+
+        public static void TestaLista()
+        {
+            Lista<int> idades = new Lista<int>();
+
+            idades.AdicionarVarios(2, 3, 4, 5, 34);
+        }
+
+        public static void TestaListaDeIdadesObject()
+        {
+            ListaDeObject listaDeIdades = new ListaDeObject();
+
+            listaDeIdades.AdicionarVarios(2, 34, 23, 16, 17, 54);
+            listaDeIdades.Adicionar("Adicionando texto qualquer");
+
+            for (int i = 0; i < listaDeIdades.Tamanho; i++)
+            {
+                int idade = (int)listaDeIdades[i];
+                Console.WriteLine($"{idade} no indice {i}");
+            }
         }
 
         public static void TestaListaDeContaCorrente()
@@ -47,9 +68,14 @@ namespace ByteBank.SistemaAgencia
 
         }
 
+        /// <summary>
+        /// Soma de vários inteiros
+        /// </summary>
+        /// <param name="numeros">Números que deseja somar</param>
+        /// <example>SomarVarios(1, 2, 4, 5, 6)</example>
+        /// <returns>Soma</returns>
         public static int SomarVarios(params int[] numeros)
         {
-            //Exemplo de utilização: SomarVarios(1, 2, 4, 5, 6)
             int soma = 0;
             foreach (int numero in numeros)
             {
@@ -58,10 +84,13 @@ namespace ByteBank.SistemaAgencia
             return soma;
         }
 
+        /// <summary>
+        /// Soma de pares. Caso a lista seja impar é ignorado o último item da lista.
+        /// </summary>
+        /// <param name="numeros">Números que deseja somar</param>
+        /// <example>SomarNumeros(new int[] {1,2,3,4,5,6,7});</example>
         public static void SomarNumeros (int[] numeros)
         {
-            //Exemplo de utilização:  SomarNumeros(new int[] {1,2,3,4,5,6,7});
-            //Array com número impar de elementos, ignora o último item, e faz a soma de dois em dois quando for par. 
             for (int i = 0; i < numeros.Length-1; i+=2)
             {
                 int primeiroNumero = numeros[i];
