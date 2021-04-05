@@ -54,3 +54,9 @@ C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\zh-CN\Human
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\zh-Hans\Humanizer.resources.dll
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\zh-Hant\Humanizer.resources.dll
 C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\ByteBank.models.pdb
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\System.Web.Mvc.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\System.Web.Razor.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\System.Web.WebPages.Razor.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\System.Web.WebPages.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\projects\CshapAnd.Net\PooCsharp\ByteBank.SistemaAgencia\bin\Debug\System.Web.WebPages.Deployment.dll
