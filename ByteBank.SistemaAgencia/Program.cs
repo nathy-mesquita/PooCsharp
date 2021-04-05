@@ -2,11 +2,11 @@
 using ByteBank.Models.Contas;
 using Humanizer;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace ByteBank.SistemaAgencia 
 {
@@ -15,34 +15,52 @@ namespace ByteBank.SistemaAgencia
         static void Main(string[] args)
         {
 
-            ListaDeContaCorrente lista = new ListaDeContaCorrente();
-
-            ContaCorrente conntaNathaly = new ContaCorrente(9999, 99999);
-
-            lista.Adicionar(conntaNathaly);
-
-            lista.Adicionar(new ContaCorrente(1234, 12340));
-            lista.Adicionar(new ContaCorrente(1234, 12341));
-            lista.Adicionar(new ContaCorrente(1234, 123432));
-            lista.Adicionar(new ContaCorrente(1234, 123433));
-            lista.Adicionar(new ContaCorrente(1234, 123434));
-            lista.Adicionar(new ContaCorrente(1234, 123435));
-            lista.Adicionar(new ContaCorrente(1234, 123436));
-            lista.Adicionar(new ContaCorrente(1234, 123437));
-            lista.Adicionar(new ContaCorrente(1234, 123438));
-            lista.Adicionar(new ContaCorrente(1234, 123439));
-            lista.Adicionar(new ContaCorrente(1234, 1234310));
-
-            lista.EscrverListaNaTela();
-            lista.Remover(conntaNathaly);
-            lista.EscrverListaNaTela();
-
             Console.ReadLine();
+        }
+
+        public static void TestaListaDeContaCorrente()
+        {
+            ListaDeContaCorrente lista = new ListaDeContaCorrente();
+            ContaCorrente contaNathaly = new ContaCorrente(9999, 99999);
+
+            ContaCorrente[] contas = new ContaCorrente[]
+            {
+                contaNathaly,
+                new ContaCorrente(1234, 12340),
+                new ContaCorrente(1234, 12341),
+                new ContaCorrente(1234, 12342)
+            };
+
+            lista.AdicionarVarios(contas);
+            lista.AdicionarVarios(
+                contaNathaly,
+                new ContaCorrente(1234, 12340),
+                new ContaCorrente(1234, 12341),
+                new ContaCorrente(1234, 12342)
+                );
+
+            for (int i = 0; i < lista.Tamanho; i++)
+            {
+                ContaCorrente itemAtual = lista.GetItemNoIndice(i);
+                Console.WriteLine($"Item na posição:{i} - conta {itemAtual.Numero}/{itemAtual.Agencia}");
+            }
+
+        }
+
+        public static int SomarVarios(params int[] numeros)
+        {
+            //Exemplo de utilização: SomarVarios(1, 2, 4, 5, 6)
+            int soma = 0;
+            foreach (int numero in numeros)
+            {
+               soma += numero;
+            }
+            return soma;
         }
 
         public static void SomarNumeros (int[] numeros)
         {
-            //Exemplo de implementação:  SomarNumeros(new int[] {1,2,3,4,5,6,7});
+            //Exemplo de utilização:  SomarNumeros(new int[] {1,2,3,4,5,6,7});
             //Array com número impar de elementos, ignora o último item, e faz a soma de dois em dois quando for par. 
             for (int i = 0; i < numeros.Length-1; i+=2)
             {
