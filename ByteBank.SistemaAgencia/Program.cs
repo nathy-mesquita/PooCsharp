@@ -14,7 +14,31 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
+            ContaCorrente conntaNathaly = new ContaCorrente(1234, 123411);
+
+            lista.Adicionar(conntaNathaly);
+
+            lista.Adicionar( new ContaCorrente(1234, 12340)); 
+            lista.Adicionar( new ContaCorrente(1234, 12341)); 
+            lista.Adicionar( new ContaCorrente(1234, 123432));
+            lista.Adicionar( new ContaCorrente(1234, 123433));
+            lista.Adicionar( new ContaCorrente(1234, 123434));
+            lista.Adicionar( new ContaCorrente(1234, 123435));
+            lista.Adicionar( new ContaCorrente(1234, 123436));
+            lista.Adicionar( new ContaCorrente(1234, 123437));
+            lista.Adicionar( new ContaCorrente(1234, 123438));
+            lista.Adicionar( new ContaCorrente(1234, 123439));
+            lista.Adicionar( new ContaCorrente(1234, 1234310));
+
+
+
+            Console.ReadLine();
+        }
+
+        public static void TestaArrayDeContaCorrente()
+        {
             ContaCorrente[] contas = new ContaCorrente[]
             {
                 new ContaCorrente(0001, 1000),
@@ -24,12 +48,10 @@ namespace ByteBank.SistemaAgencia
             };
 
 
-            for (int i= 0; i< contas.Length; i++)
+            for (int i = 0; i < contas.Length; i++)
             {
                 Console.WriteLine($"Conta Corrente {i}: {contas[i].Numero}");
             }
-
-            Console.ReadLine();
         }
 
         public static void MediaDeIdadesComArray()
