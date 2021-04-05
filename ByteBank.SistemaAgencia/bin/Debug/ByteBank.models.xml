@@ -44,6 +44,19 @@
             <param name="valor">valor para transferência</param>
             <param name="contaDestino">conta de destino para tranferência</param>
         </member>
+        <member name="M:ByteBank.Models.Contas.ContaCorrente.ToString">
+            <summary>
+            Sobreescrita do método ToString
+            </summary>
+            <returns>Número, Agência e Saldo</returns>
+        </member>
+        <member name="M:ByteBank.Models.Contas.ContaCorrente.Equals(System.Object)">
+            <summary>
+            Verifica igualdade
+            </summary>
+            <param name="obj">Objeto de Conta Corrente</param>
+            <returns>True se o objeto especificado for igual ao objeto corrente</returns>
+        </member>
         <member name="T:ByteBank.Models.Exceptions.OperaçãoFinanceiraException">
             <summary>
             Define uma exceção OperacaoFinanceiraException 

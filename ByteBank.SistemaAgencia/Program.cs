@@ -14,27 +14,43 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
-            ContaCorrente conntaNathaly = new ContaCorrente(1234, 123411);
+            ContaCorrente conntaNathaly = new ContaCorrente(9999, 99999);
 
             lista.Adicionar(conntaNathaly);
 
-            lista.Adicionar( new ContaCorrente(1234, 12340)); 
-            lista.Adicionar( new ContaCorrente(1234, 12341)); 
-            lista.Adicionar( new ContaCorrente(1234, 123432));
-            lista.Adicionar( new ContaCorrente(1234, 123433));
-            lista.Adicionar( new ContaCorrente(1234, 123434));
-            lista.Adicionar( new ContaCorrente(1234, 123435));
-            lista.Adicionar( new ContaCorrente(1234, 123436));
-            lista.Adicionar( new ContaCorrente(1234, 123437));
-            lista.Adicionar( new ContaCorrente(1234, 123438));
-            lista.Adicionar( new ContaCorrente(1234, 123439));
-            lista.Adicionar( new ContaCorrente(1234, 1234310));
+            lista.Adicionar(new ContaCorrente(1234, 12340));
+            lista.Adicionar(new ContaCorrente(1234, 12341));
+            lista.Adicionar(new ContaCorrente(1234, 123432));
+            lista.Adicionar(new ContaCorrente(1234, 123433));
+            lista.Adicionar(new ContaCorrente(1234, 123434));
+            lista.Adicionar(new ContaCorrente(1234, 123435));
+            lista.Adicionar(new ContaCorrente(1234, 123436));
+            lista.Adicionar(new ContaCorrente(1234, 123437));
+            lista.Adicionar(new ContaCorrente(1234, 123438));
+            lista.Adicionar(new ContaCorrente(1234, 123439));
+            lista.Adicionar(new ContaCorrente(1234, 1234310));
 
-
+            lista.EscrverListaNaTela();
+            lista.Remover(conntaNathaly);
+            lista.EscrverListaNaTela();
 
             Console.ReadLine();
+        }
+
+        public static void SomarNumeros (int[] numeros)
+        {
+            //Exemplo de implementação:  SomarNumeros(new int[] {1,2,3,4,5,6,7});
+            //Array com número impar de elementos, ignora o último item, e faz a soma de dois em dois quando for par. 
+            for (int i = 0; i < numeros.Length-1; i+=2)
+            {
+                int primeiroNumero = numeros[i];
+                int segundoNumero = numeros[i + 1];
+                int soma = primeiroNumero + segundoNumero;
+                Console.WriteLine($"{primeiroNumero} + {segundoNumero} = {soma}");
+            }
         }
 
         public static void TestaArrayDeContaCorrente()
