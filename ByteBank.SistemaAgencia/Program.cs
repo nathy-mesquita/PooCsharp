@@ -14,9 +14,21 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            List<int> idades = new List<int>();
+            
+            idades.AdicionarVarios(6, 7, 8, 9);
+
+            for (int i = 0; i < idades.Count; i++)
+            {
+                idades[i].Print();
+            }
+
+            ListExtensions.AdicionarVarios(idades, 1, 2, 3, 4, 5);
 
             Console.ReadLine();
         }
+
+        #region [Métodos Estáticos Auxiliares]
 
         public static void TestaLista()
         {
@@ -191,5 +203,7 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(mensagem);
             Console.ReadLine();
         }
+        #endregion
     }
+
 }
