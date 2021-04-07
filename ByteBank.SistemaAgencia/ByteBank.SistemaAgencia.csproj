@@ -47,11 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ListExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="ExtractValueArgumentsURL.cs" />
     <Compile Include="Lista.cs" />
     <Compile Include="ListaDeContaCorrente.cs" />
     <Compile Include="ListaDeObject.cs" />
-    <Compile Include="ListExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

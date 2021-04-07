@@ -7,6 +7,7 @@ using ByteBank.Models.Contas;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using ByteBank.SistemaAgencia.Extensions;
 
 namespace ByteBank.SistemaAgencia 
 {
@@ -22,8 +23,6 @@ namespace ByteBank.SistemaAgencia
             {
                 idades[i].Print();
             }
-
-            ListExtensions.AdicionarVarios(idades, 1, 2, 3, 4, 5);
 
             Console.ReadLine();
         }
