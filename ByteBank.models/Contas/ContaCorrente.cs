@@ -1,16 +1,16 @@
-﻿using ByteBank.Models.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
+using ByteBank.Models.Exceptions;
+using System.Collections.Generic;
 
 namespace ByteBank.Models.Contas
 {
     /// <summary>
     /// Define uma conta corrente do banco ByteBank.
     /// </summary>
-    public class ContaCorrente
+    public class ContaCorrente : IComparable
     {
 
         public static double TaxaOperacao { get; private set; }
@@ -142,5 +142,25 @@ namespace ByteBank.Models.Contas
             return Numero == outraConta.Numero && Agencia == outraConta.Agencia;
         }
 
+        /*
+        * Retorna negativo quando a instância é menor que o obj;
+        * Retorna zero quando nossa instância e obj forem equivalentes;
+        * Retorna positivo diferente de zero quando a instância é maior que o obj;
+        */
+        public int CompareTo(object obj)
+        {
+            var outraConta = obj as ContaCorrente;
+
+            if (outraConta == null)
+                return -1;
+
+            if (Numero < outraConta.Numero)
+                return -1;
+
+            if (Numero == outraConta.Numero)
+                return 0;
+
+            return 1;
+        }
     }
 }
