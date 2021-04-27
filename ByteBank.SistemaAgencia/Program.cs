@@ -21,6 +21,50 @@ namespace ByteBank.SistemaAgencia
             var contas = new List<ContaCorrente>()
             {
                 new ContaCorrente(123, 234568),
+                null,
+                new ContaCorrente(001, 234567),
+                null,
+                null,
+                new ContaCorrente(234, 234569),
+                new ContaCorrente(345, 234570),
+            };
+            //contas.Sort(); --> Chama a implementação em IComparable
+
+            //contas.Sort(new ComparadorContaCorrentePorAgencia());
+
+
+            // Retorna uma coleção 
+            IOrderedEnumerable<ContaCorrente> contaOrdenada =
+                contas.OrderBy(conta => {
+                    if (conta == null)
+                    {
+                        return int.MaxValue;
+                    }
+                    return conta.Numero; 
+                });
+
+            //
+
+            foreach (var conta in contaOrdenada)
+            {
+                if (conta != null)
+                {
+                    Console.WriteLine($"Conta corrente número{conta.Numero} e agência{conta.Agencia}");
+                }
+            }
+
+            Console.ReadLine();
+        }
+
+        #region [Métodos Estáticos Auxiliares]
+
+        public static void Metodo()
+        {
+            //Ordenação de Conta Corrente
+
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(123, 234568),
                 new ContaCorrente(001, 234567),
                 new ContaCorrente(234, 234569),
                 new ContaCorrente(345, 234570),
@@ -34,10 +78,7 @@ namespace ByteBank.SistemaAgencia
                 Console.WriteLine($"Conta corrente número{conta.Numero} e agência{conta.Agencia}");
             }
 
-            Console.ReadLine();
         }
-
-        #region [Métodos Estáticos Auxiliares]
 
         public static void TestaOrdenacao()
         {
