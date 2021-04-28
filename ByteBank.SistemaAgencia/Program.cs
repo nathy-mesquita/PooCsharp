@@ -7,6 +7,8 @@ using ByteBank.Models.Contas;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using ByteBank.SistemaAgencia.Extensions;
+using ByteBank.SistemaAgencia.Comparadores;
 
 namespace ByteBank.SistemaAgencia 
 {
@@ -14,8 +16,72 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            MetodoDeFiltroEOrdenacao();
+            Console.ReadLine();
+        }
+
+        #region [Métodos Estáticos Auxiliares]
+
+        public static void MetodoDeFiltroEOrdenacao()
+        {
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(123, 234568),
+                null,
+                new ContaCorrente(001, 234567),
+                null,
+                null,
+                new ContaCorrente(234, 234569),
+                new ContaCorrente(345, 234570),
+            };
+            //contas.Sort(); --> Chama a implementação em IComparable
+
+            //contas.Sort(new ComparadorContaCorrentePorAgencia());
+            ;
+            var contasNaoNulas = contas
+                .Where(conta => conta != null)
+                .OrderBy(conta => conta.Numero);
+
+
+            foreach (var conta in contasNaoNulas)
+            {
+                Console.WriteLine($"Conta corrente número{conta.Numero} e agência{conta.Agencia}");
+            }
 
             Console.ReadLine();
+
+        }
+
+        public static void TestaOrdenacao()
+        {
+
+            //Ordenação de string
+            var nomes = new List<string>()
+            {
+                "nathaly",
+                "luana",
+                "amanda"
+            };
+
+            nomes.Sort();
+
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine(nome);
+            }
+
+            //Ordenação de idades
+            var idades = new List<int>();
+
+            idades.AdicionarVarios(6, 7, 8, 9);
+
+            idades.Sort();
+
+            for (int i = 0; i < idades.Count; i++)
+            {
+                idades[i].Print();
+            }
+
         }
 
         public static void TestaLista()
@@ -191,5 +257,7 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(mensagem);
             Console.ReadLine();
         }
+        #endregion
     }
+
 }
