@@ -16,8 +16,14 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            //Ordenação de Conta Corrente
+            MetodoDeFiltroEOrdenacao();
+            Console.ReadLine();
+        }
 
+        #region [Métodos Estáticos Auxiliares]
+
+        public static void MetodoDeFiltroEOrdenacao()
+        {
             var contas = new List<ContaCorrente>()
             {
                 new ContaCorrente(123, 234568),
@@ -31,52 +37,18 @@ namespace ByteBank.SistemaAgencia
             //contas.Sort(); --> Chama a implementação em IComparable
 
             //contas.Sort(new ComparadorContaCorrentePorAgencia());
+            ;
+            var contasNaoNulas = contas
+                .Where(conta => conta != null)
+                .OrderBy(conta => conta.Numero);
 
 
-            // Retorna uma coleção 
-            IOrderedEnumerable<ContaCorrente> contaOrdenada =
-                contas.OrderBy(conta => {
-                    if (conta == null)
-                    {
-                        return int.MaxValue;
-                    }
-                    return conta.Numero; 
-                });
-
-            //
-
-            foreach (var conta in contaOrdenada)
-            {
-                if (conta != null)
-                {
-                    Console.WriteLine($"Conta corrente número{conta.Numero} e agência{conta.Agencia}");
-                }
-            }
-
-            Console.ReadLine();
-        }
-
-        #region [Métodos Estáticos Auxiliares]
-
-        public static void Metodo()
-        {
-            //Ordenação de Conta Corrente
-
-            var contas = new List<ContaCorrente>()
-            {
-                new ContaCorrente(123, 234568),
-                new ContaCorrente(001, 234567),
-                new ContaCorrente(234, 234569),
-                new ContaCorrente(345, 234570),
-            };
-            //contas.Sort(); --> Chama a implementação em IComparable
-
-            contas.Sort(new ComparadorContaCorrentePorAgencia());
-
-            foreach (var conta in contas)
+            foreach (var conta in contasNaoNulas)
             {
                 Console.WriteLine($"Conta corrente número{conta.Numero} e agência{conta.Agencia}");
             }
+
+            Console.ReadLine();
 
         }
 
