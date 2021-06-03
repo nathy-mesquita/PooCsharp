@@ -33,5 +33,21 @@ namespace ByteBank.ImportacaoExportacao
                 escritor.Write("4371,401966,20000000.50,Nathaly Mesquita");
             }
         }
+
+        static void TestaEscrita()
+        {
+            var caminhoNovoArquivo = "teste.txt";
+            using (var fluxoDeArquivo = new FileStream(caminhoNovoArquivo, FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDeArquivo))
+            {
+                for (int i = 0; i < 10000; i++)
+                {
+                    escritor.WriteLine($"Linha {i}");
+                    escritor.Flush();
+                    Console.WriteLine($"Linha {i} executada com sucesso!");
+                    Console.ReadLine();
+                }
+            }
+        }
     }
 }
